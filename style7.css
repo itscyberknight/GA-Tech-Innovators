@@ -1,0 +1,238 @@
+:root{
+  --primary:#4f46e5;
+  --secondary:#eef2ff;
+  --dark:#0f172a;
+  --muted:#64748b;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#f8fafc,#eef2ff);
+  color:var(--dark);
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+section{
+  padding:80px 0;
+}
+
+h1,h2,h3{
+  font-weight:700;
+}
+
+h2{
+  font-size:clamp(28px,4vw,36px);
+}
+
+p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:16px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:12px 26px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{
+  background:#4338ca;
+}
+
+/* NAV */
+nav{
+  background:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.nav-flex{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 0;
+}
+.logo{
+  font-size:24px;
+}
+.logo span{color:var(--primary);}
+
+/* HERO */
+.hero{
+  text-align:center;
+}
+.hero h1{
+  font-size:clamp(34px,6vw,52px);
+}
+.hero h1 span{
+  color:var(--primary);
+}
+.hero p{
+  max-width:800px;
+  margin:20px auto 0;
+  font-size:18px;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.about-box{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.06);
+}
+
+/* PRODUCTS */
+.products{
+  background:#fff;
+}
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.product-card{
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.06);
+}
+.product-card h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+/* VISION */
+.vision{
+  text-align:center;
+}
+.vision p{
+  max-width:900px;
+  margin:20px auto 0;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  background:#fff;
+  border-top:1px solid #e5e7eb;
+  text-align:center;
+  padding:30px 0;
+}
+footer p{
+  font-size:14px;
+}
+
+/* RESPONSIVE FIXES */
+@media(max-width:768px){
+  section{
+    padding:60px 0;
+  }
+
+  .hero p,
+  .vision p{
+    font-size:16px;
+  }
+}
+/* =========================
+   FULL RESPONSIVE ENHANCEMENTS
+   (No existing code modified)
+   ========================= */
+
+/* Prevent horizontal overflow on small devices */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make buttons and text easier to tap on mobile */
+@media (max-width: 600px) {
+  .btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+/* Navigation responsiveness */
+@media (max-width: 768px) {
+  .nav-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}
+
+/* Hero section spacing and text scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    padding: 0 10px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
+
+/* Mobile-first layout tightening */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  footer p {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
+/* Grid stability on very small screens */
+@media (max-width: 360px) {
+  .about-grid,
+  .products-grid {
+    gap: 20px;
+  }
+}

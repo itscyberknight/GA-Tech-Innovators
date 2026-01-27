@@ -1,0 +1,234 @@
+:root{
+  --primary:#e11d48; /* Red */
+  --dark:#111827;
+  --muted:#6b7280;
+  --light:#ffffff;
+  --bg:#f9fafb;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--dark);
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+section{
+  padding:80px 0;
+}
+
+h1,h2,h3{
+  font-weight:700;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:16px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:12px 28px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{
+  opacity:.9;
+}
+
+/* NAV */
+nav{
+  background:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.nav-flex{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+.logo{
+  font-size:24px;
+}
+.logo span{
+  color:var(--primary);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  background:#fff;
+}
+.hero h1{
+  font-size:clamp(36px,6vw,56px);
+}
+.hero h1 span{
+  color:var(--primary);
+}
+.hero p{
+  max-width:850px;
+  margin:20px auto 30px;
+  font-size:18px;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.about-box{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.06);
+}
+
+/* WORK */
+.work{
+  background:#fff;
+}
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.work-card{
+  padding:30px;
+  border-left:5px solid var(--primary);
+  background:#fdfdfd;
+  border-radius:12px;
+}
+
+/* VISION */
+.vision{
+  text-align:center;
+}
+.vision p{
+  max-width:900px;
+  margin:20px auto 0;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  background:#fff;
+  border-top:1px solid #e5e7eb;
+  text-align:center;
+  padding:30px 0;
+}
+footer p{
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{
+    padding:60px 0;
+  }
+  .hero p,
+  .vision p{
+    font-size:16px;
+  }
+}
+/* =========================
+   FULL RESPONSIVE ENHANCEMENTS
+   (No existing code modified)
+   ========================= */
+
+/* Prevent horizontal overflow on small devices */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make buttons and text easier to tap on mobile */
+@media (max-width: 600px) {
+  .btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+/* Navigation responsiveness */
+@media (max-width: 768px) {
+  .nav-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}
+
+/* Hero section spacing and text scaling */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    padding: 0 10px;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
+
+/* Mobile-first layout tightening */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  footer p {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+
+/* Grid stability on very small screens */
+@media (max-width: 360px) {
+  .about-grid,
+  .products-grid {
+    gap: 20px;
+  }
+}

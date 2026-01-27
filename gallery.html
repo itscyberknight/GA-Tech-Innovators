@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GA Tech Innovators | Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+<!-- INTERACTIVE ROBO -->
+<div class="robo-container" onclick="openWhatsApp()">
+  <img src="Assets/robo.gif">
+  <div class="robo-bubble">Need help?</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-flex">
+    <div class="logo">GA <span>Tech Innovators</span></div>
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="page-header">
+  <div class="container">
+    <h1>Gallery</h1>
+    <p>Seminars • Webinars • College Workshops • Awareness Programs</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <div class="gallery-grid">
+
+      <div class="gallery-item" onclick="openLightbox(0)"><img src="Assets/gallery/img1.jpeg"></div>
+      <div class="gallery-item" onclick="openLightbox(1)"><img src="Assets/gallery/img2.jpg"></div>
+      <div class="gallery-item" onclick="openLightbox(2)"><img src="Assets/gallery/img3.jpg"></div>
+      <div class="gallery-item" onclick="openLightbox(3)"><img src="Assets/gallery/img4.jpeg"></div>
+      <div class="gallery-item" onclick="openLightbox(4)"><img src="Assets/gallery/img5.jpeg"></div>
+      <div class="gallery-item" onclick="openLightbox(5)"><img src="Assets/gallery/img6.png"></div>
+      <div class="gallery-item" onclick="openLightbox(6)"><img src="Assets/gallery/img7.jpeg"></div>
+      <div class="gallery-item" onclick="openLightbox(7)"><img src="Assets/gallery/img8.jpeg"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">&times;</span>
+  <span class="lb-prev" onclick="changeImage(-1)">❮</span>
+  <img id="lightbox-img">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <span class="lb-next" onclick="changeImage(1)">❯</span>
+</div>
+
+<script src="script2.js"></script>
+</body>
+</html>
